@@ -2,7 +2,6 @@ package com.ll.mango.controller;
 
 
 import com.ll.mango.service.SysUserService;
-//import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,11 +10,11 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("user")
 public class SysUserController {
-    //private static Logger logger=Logger.getLogger(SysUserController.class);
     @Autowired
     private SysUserService sysUserService;
-    @GetMapping("/findAll")
-    public Object findAll(){
+
+    @PostMapping("/findAll")
+    public Object findAll() {
         return sysUserService.findAll();
     }
 

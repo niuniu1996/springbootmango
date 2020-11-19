@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("user")
 public class SysUserController {
-    private static Logger logger=Logger.getLogger(SysUserController.class);
+    private static Logger logger = Logger.getLogger(SysUserController.class);
     @Autowired
     private SysUserService sysUserService;
-    @GetMapping("/findAll")
-    public Object findAll(){
+
+    @PostMapping("/findAll")
+    public Object findAll() {
         logger.info("调用查询所有用户接口");
         return sysUserService.findAll();
     }
