@@ -9,7 +9,10 @@ import java.util.*;
  */
 public class ListMap {
 
-
+    /**
+     * 服务治理平台调用方-提供方关系
+     * @return
+     */
     private static List work() {
         List<Map<Integer, String>> list = new ArrayList<>();
         Map<Integer, String> map1 = new HashMap<>();
